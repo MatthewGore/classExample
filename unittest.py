@@ -1,9 +1,11 @@
-import sum_nums.py as nums
+# test_sum_nums.py
+import unittest
+from sum_nums import sum_nums
 
-num_list = [3,7,5,8,4,2,8,3]
-real_sum = sum(num_list)
-if real_sum == nums.sum_nums(num_list):
-  print("Success!\n")
-else:
-  print("Fail!")
-￼
+class TestSumNums(unittest.TestCase):
+
+  def test_sum_nums(self):
+    self.assertEqual(sum_nums(2, 3), 5)
+
+if __name__ == "__main__":
+  unittest.main()
